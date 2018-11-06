@@ -1,30 +1,31 @@
-//Start button on the Start Page takes user to the first question
-//When an answer is selected, turn white border box into blue
-//when an answer is selected, other answer boxes turn into white border
-//when an answer is submitted, Question Status on the bottom adds from 0/10 to 1/10 and so on
-//If an answer submitted is correct, add Score status on the bottom from 0/10 to 1/10 and so on
-//If a submit button is clicked without an answer choosed, show a red bordered box wrapping the whole 4 answers
-//If a submit button is clicked without an answer choosed, show a text Please make a choice in red on the top of the red bordered box
-//When an anwer is submitted, display the next question
-//When an answer is submitted, display the matching choices for the question
-//final page will let the user restart the quiz from question one as a new user
-//final page with with 5/5 correct answer shows different text than 3/5 or 0/5
-
-//step 1, Define global variable
 const questionsArray = [
     //question 0
     {
-        questionText: 'ثسسسسسسسسسسسسسسسسسسسسسسسسسسسسسسسسسسسسسسسسسسسسسسسسشسيس',
-        questionChoice: ['شسيسش', 'شسيسش', 'شسيشسي', 'سشيشسيس'],
-        questionAnswer: 3,
+        questionText: 'The best tool to peel a ginger is...',
+        questionChoice: ['Vegetalble peeler', 'Cheese grater', 'Paring Knife', 'Spoon'],
+        questionAnswer: 1,
     },
-
+    {
+        questionText: 'The best tool to peel a ginger is...',
+        questionChoice: ['Vegetalble peeler', 'Cheese grater', 'Paring Knife', 'Spoon'],
+        questionAnswer: 1,
+    },
+    {
+        questionText: 'The best tool to peel a ginger is...',
+        questionChoice: ['Vegetalble peeler', 'Cheese grater', 'Paring Knife', 'Spoon'],
+        questionAnswer: 1,
+    },
+    {
+        questionText: 'The best tool to peel a ginger is...',
+        questionChoice: ['Vegetalble peeler', 'Cheese grater', 'Paring Knife', 'Spoon'],
+        questionAnswer: 1,
+    },
 ];
 
 
 let currentQuestionNumber = 0;
 let totalNumberOfQuestion = questionsArray.length;
-let totalScore = 3
+let totalScore = 0;
 
 
 
@@ -72,7 +73,7 @@ function checkAnswer() {
     if (userAnswer == correctAnswer) {
         //add totalScore by 1
         totalScore++;
-        console.log(totalScore);
+        console.log(totalScore * 10 + "Momen");
     }
     //else
     //return false
@@ -109,8 +110,8 @@ function answersDisplay() {
     for (let i = 0; i < amountOfAnswers; i++) {
         $('.answers-container').append(
             `
-            <div class='answer'>
-                <input  type="radio" name='answer' value='${i}' required onclick="Showbutton()">${questionsArray[currentQuestionNumber].questionChoice[i]}<br />
+            <div class='answerDiv'>
+                <input  class="answer" type="radio" name='answer' value='${i}' onclick="Showbutton()" required >${questionsArray[currentQuestionNumber].questionChoice[i]}<br />
             </div>
             `
         );
@@ -125,16 +126,14 @@ function Showbutton() {
 function questionStatus() {
     $('.question-circle').empty();
     $('.question-circle').append(
-        `<p class= 'question-status'>السؤال ${currentQuestionNumber + 1} من 10</p>`
+        `<p class= 'question-status'>السؤال ${currentQuestionNumber + 1} من ${totalNumberOfQuestion }</p>`
     );
 };
 
 function scoreStatus() {
     $('.score-circle').empty();
-    $('.score-circle').append(
-        `<p>Score ${totalScore} out of 10</p>`
-    );
-    console.log('scoreStatus ran');
+    $('.score-circle').append(`${totalScore} `);
+    console.log('Momen Hesham ' + totalScore);
     console.log(totalScore);
 };
 
@@ -145,7 +144,7 @@ function submit() {
             $('.final-score-container').empty();
             $('.final-score-container').append(
                 `
-                    ${totalScore}
+                    ${totalScore * 10}
                 `
             );
             $('.start-section').hide();
@@ -160,6 +159,8 @@ function submit() {
             questionDisplay();
             answersDisplay();
             console.log(totalScore);
+            $('.submit-button').hide();
+            $('.waitSelectAnswer').show();
 
         }
     });
