@@ -14,7 +14,7 @@ const questionsArray = [
         questionAnswerOne: 0,
         questionAnswerTwo: 1,
         questionAnswerThree: 2,
-        questionAnswerFour: 3,
+        questionAnswerFour: 3
     },
     {
         questionText: 'بتشارك اهتماماتك/الحاجات اللى بتحبها/بتحب تعملها مع حد؟',
@@ -22,7 +22,7 @@ const questionsArray = [
         questionAnswerOne: 0,
         questionAnswerTwo: 1,
         questionAnswerThree: 2,
-        questionAnswerFour: 3,
+        questionAnswerFour: 3
     },
     {
         questionText: 'بتحب تسمع ايه؟',
@@ -30,14 +30,14 @@ const questionsArray = [
         questionAnswerOne: 0,
         questionAnswerTwo: 1,
         questionAnswerThree: 2,
-        questionAnswerFour: 3,
+        questionAnswerFour: 3
     },{
         questionText: 'ارتبط كام مره؟',
         questionChoice: [' ولا مره🙂', 'مره واحده', 'اكتر من مره', 'مرتبط حاليا'],
         questionAnswerOne: 0,
         questionAnswerTwo: 1,
         questionAnswerThree: 2,
-        questionAnswerFour: 3,
+        questionAnswerFour: 3
     },
     {
         questionText: 'بتروح تصيف فين؟',
@@ -45,7 +45,7 @@ const questionsArray = [
         questionAnswerOne: 0,
         questionAnswerTwo: 1,
         questionAnswerThree: 2,
-        questionAnswerFour: 3,
+        questionAnswerFour: 3
     },
     {
         questionText: 'بتقضي وقتك فراغك في ايه؟',
@@ -53,7 +53,7 @@ const questionsArray = [
         questionAnswerOne: 0,
         questionAnswerTwo: 1,
         questionAnswerThree: 2,
-        questionAnswerFour: 3,
+        questionAnswerFour: 3
     },
 ];
 
@@ -190,7 +190,7 @@ function submit() {
             $('.final-score-container').empty();
             $('.final-score-container').append(
                 `
-                    ${totalScore * 10 / 100}
+                    ${totalScore}
                 `
             );
             $('.start-section').hide();
