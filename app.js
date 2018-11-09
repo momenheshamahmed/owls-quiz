@@ -3,22 +3,34 @@ const questionsArray = [
     {
         questionText: 'The best tool to peel a ginger is...',
         questionChoice: ['Vegetalble peeler', 'Cheese grater', 'Paring Knife', 'Spoon'],
-        questionAnswer: 1,
+        questionAnswerOne: 0,
+        questionAnswerTwo: 1,
+        questionAnswerThree: 2,
+        questionAnswerFour: 3,
     },
     {
         questionText: 'The best tool to peel a ginger is...',
         questionChoice: ['Vegetalble peeler', 'Cheese grater', 'Paring Knife', 'Spoon'],
-        questionAnswer: 1,
+        questionAnswerOne: 0,
+        questionAnswerTwo: 1,
+        questionAnswerThree: 2,
+        questionAnswerFour: 3,
     },
     {
         questionText: 'The best tool to peel a ginger is...',
         questionChoice: ['Vegetalble peeler', 'Cheese grater', 'Paring Knife', 'Spoon'],
-        questionAnswer: 1,
+        questionAnswerOne: 0,
+        questionAnswerTwo: 1,
+        questionAnswerThree: 2,
+        questionAnswerFour: 3,
     },
     {
         questionText: 'The best tool to peel a ginger is...',
         questionChoice: ['Vegetalble peeler', 'Cheese grater', 'Paring Knife', 'Spoon'],
-        questionAnswer: 1,
+        questionAnswerOne: 0,
+        questionAnswerTwo: 1,
+        questionAnswerThree: 2,
+        questionAnswerFour: 3,
     },
 ];
 
@@ -66,17 +78,28 @@ function checkAnswer() {
 
     //    let userAnswer = $('input[class="answer"]:checked').val()
     let userAnswer = $('input[class="answer"]:checked').val();
-    console.log($('input[class="answer"]:checked'));
-    //if answer === currentQuestionNumber.questionAnswer
-    let correctAnswer = questionsArray[currentQuestionNumber].questionAnswer;
-    console.log(correctAnswer, userAnswer);
-    if (userAnswer == correctAnswer) {
+    let correctAnswer = questionsArray[currentQuestionNumber].questionAnswerOne;
+
+    if (userAnswer == questionsArray[currentQuestionNumber].questionAnswerOne) {
         //add totalScore by 1
-        totalScore++;
-        console.log(totalScore * 10 + "Momen");
+        totalScore += 10;
+        console.log(totalScore + 10 + "Momen Hesham Ahmed Osman");
     }
-    //else
-    //return false
+    else if (userAnswer == questionsArray[currentQuestionNumber].questionAnswerTwo) {
+        totalScore += 5;
+        console.log(totalScore + 5 + "Momen Hesham Ahmed Osman");
+
+    }
+    else if (userAnswer == questionsArray[currentQuestionNumber].questionAnswerThree) {
+        totalScore += 3;
+        console.log(totalScore + 3 + "Momen Hesham Ahmed Osman");
+
+    }
+    else if (userAnswer == questionsArray[currentQuestionNumber].questionAnswerFour) {
+        totalScore += 0;
+        console.log(totalScore + 10 + "Momen Hesham Ahmed Osman");
+    }
+
     else {
         console.log(totalScore)
     };
@@ -144,7 +167,7 @@ function submit() {
             $('.final-score-container').empty();
             $('.final-score-container').append(
                 `
-                    ${totalScore * 10}
+                    ${totalScore * 10 / 100}
                 `
             );
             $('.start-section').hide();
