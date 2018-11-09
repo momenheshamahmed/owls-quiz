@@ -1,24 +1,38 @@
 const questionsArray = [
     //question 0
     {
-        questionText: 'The best tool to peel a ginger is...',
-        questionChoice: ['Vegetalble peeler', 'Cheese grater', 'Paring Knife', 'Spoon'],
-        questionAnswer: 1,
+        questionText: 'جيبك فيه قد ايه دلوقتي؟ ',
+        questionChoice: ['اقل من 10 جنيه', 'اقل من 100 جنيه', '100-200 جنيه', 'انا غني فشخ'],
+        questionAnswer: 0,
     },
     {
-        questionText: 'The best tool to peel a ginger is...',
-        questionChoice: ['Vegetalble peeler', 'Cheese grater', 'Paring Knife', 'Spoon'],
-        questionAnswer: 1,
+        questionText: 'عندك أصدقاء خياليين؟ ',
+        questionChoice: ['كل صحابي خايلين', 'واحد بس ساعه الشده', 'احينا', 'لا'],
+        questionAnswer: 0,
     },
     {
-        questionText: 'The best tool to peel a ginger is...',
-        questionChoice: ['Vegetalble peeler', 'Cheese grater', 'Paring Knife', 'Spoon'],
-        questionAnswer: 1,
+        questionText: 'بتشارك اهتماماتك/الحاجات اللى بتحبها/بتحب تعملها مع حد؟',
+        questionChoice: ['معنديش حاجه بحبها', 'احينا', 'مع صحابي بس', 'بشارك مع كل الناس'],
+        questionAnswer: 0,
     },
     {
-        questionText: 'The best tool to peel a ginger is...',
-        questionChoice: ['Vegetalble peeler', 'Cheese grater', 'Paring Knife', 'Spoon'],
-        questionAnswer: 1,
+        questionText: 'بتحب تسمع ايه؟',
+        questionChoice: ['اغاني جرح و حزن', 'حمو بيكا', 'روك', 'ميتال'],
+        questionAnswer: 0,
+    },{
+        questionText: 'ارتبط كام مره؟',
+        questionChoice: [' ولا مره🙂', 'مره واحده', 'اكتر من مره', 'مرتبط حاليا'],
+        questionAnswer: 0,
+    },
+    {
+        questionText: 'بتروح تصيف فين؟',
+        questionChoice: [' انا بخاف من المياه و الشمس', 'في البانيو', 'السخنه', ' الساحل او الجونه '],
+        questionAnswer: 0
+    },
+    {
+        questionText: 'بتقضي وقتك فراغك في ايه؟',
+        questionChoice: ['العدم', 'بتفرج علي مسلسلات او بلعب', 'بنزل اتمشي ', ' بروح القهوه '],
+        questionAnswer: 0,
     },
 ];
 
