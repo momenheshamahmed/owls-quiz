@@ -10,7 +10,7 @@ const questionsArray = [
     },
     {
         questionText: 'عندك أصدقاء خياليين؟ ',
-        questionChoice: ['كل صحابي خايلين', 'واحد بس ساعه الشده', 'احينا', 'لا'],
+        questionChoice: ['كل صحابي خايلين', 'واحد بس ساعة الشدة', 'احيانا', 'لا'],
         questionAnswerOne: 0,
         questionAnswerTwo: 1,
         questionAnswerThree: 2,
@@ -18,7 +18,7 @@ const questionsArray = [
     },
     {
         questionText: 'بتشارك اهتماماتك/الحاجات اللى بتحبها/بتحب تعملها مع حد؟',
-        questionChoice: ['معنديش حاجه بحبها', 'احينا', 'مع صحابي بس', 'بشارك مع كل الناس'],
+        questionChoice: ['معنديش حاجة بحبها', 'احيانا', 'مع صحابي بس', 'بشارك مع كل الناس'],
         questionAnswerOne: 0,
         questionAnswerTwo: 1,
         questionAnswerThree: 2,
@@ -33,7 +33,7 @@ const questionsArray = [
         questionAnswerFour: 3
     },{
         questionText: 'ارتبط كام مره؟',
-        questionChoice: [' ولا مره🙂', 'مره واحده', 'اكتر من مره', 'مرتبط حاليا'],
+        questionChoice: [' ولا مرة', 'مرة واحدة', 'اكتر من مرة', 'مرتبط حاليا'],
         questionAnswerOne: 0,
         questionAnswerTwo: 1,
         questionAnswerThree: 2,
@@ -41,7 +41,7 @@ const questionsArray = [
     },
     {
         questionText: 'بتروح تصيف فين؟',
-        questionChoice: [' انا بخاف من المياه و الشمس', 'في البانيو', 'السخنه', ' الساحل او الجونه '],
+        questionChoice: [' انا بخاف من المية و الشمس', 'في البانيو', 'السخنة', 'والساحل او الجونة '],
         questionAnswerOne: 0,
         questionAnswerTwo: 1,
         questionAnswerThree: 2,
@@ -49,7 +49,7 @@ const questionsArray = [
     },
     {
         questionText: 'بتقضي وقتك فراغك في ايه؟',
-        questionChoice: ['العدم', 'بتفرج علي مسلسلات او بلعب', 'بنزل اتمشي ', ' بروح القهوه '],
+        questionChoice: ['العدم', 'بتفرج علي مسلسلات او بلعب', 'بنزل اتمشي ', ' بروح القهوة '],
         questionAnswerOne: 0,
         questionAnswerTwo: 1,
         questionAnswerThree: 2,
@@ -72,9 +72,9 @@ function startChoppin() {
         $('.start-section').hide();
         $('.question-section').show();
         $('.final-section').hide();
-        console.log('1.startChoppin ran');
+        // console.log('1.startChoppin ran');
         currentQuestionNumber = 0;
-        console.log('currentQuestionNumber');
+        // console.log('currentQuestionNumber');
     })
 };
 
@@ -106,25 +106,25 @@ function checkAnswer() {
     if (userAnswer == questionsArray[currentQuestionNumber].questionAnswerOne) {
         //add totalScore by 1
         totalScore += 10;
-        console.log(totalScore + 10 + "Momen Hesham Ahmed Osman");
+        // console.log(totalScore + 10 + "Momen Hesham Ahmed Osman");
     }
     else if (userAnswer == questionsArray[currentQuestionNumber].questionAnswerTwo) {
         totalScore += 5;
-        console.log(totalScore + 5 + "Momen Hesham Ahmed Osman");
+        // console.log(totalScore + 5 + "Momen Hesham Ahmed Osman");
 
     }
     else if (userAnswer == questionsArray[currentQuestionNumber].questionAnswerThree) {
         totalScore += 3;
-        console.log(totalScore + 3 + "Momen Hesham Ahmed Osman");
+        // console.log(totalScore + 3 + "Momen Hesham Ahmed Osman");
 
     }
     else if (userAnswer == questionsArray[currentQuestionNumber].questionAnswerFour) {
         totalScore += 0;
-        console.log(totalScore + 10 + "Momen Hesham Ahmed Osman");
+        // console.log(totalScore + 10 + "Momen Hesham Ahmed Osman");
     }
 
     else {
-        console.log(totalScore)
+        // console.log(totalScore)
     };
 };
 
@@ -161,9 +161,9 @@ function answersDisplay() {
             </div>
             `
         );
-        console.log(i);
+        // console.log(i);
     }
-    console.log('answersDisplay ran');
+    // console.log('answersDisplay ran');
 }
 function Showbutton() {
     $('.waitSelectAnswer').hide();
@@ -179,8 +179,8 @@ function questionStatus() {
 function scoreStatus() {
     $('.score-circle').empty();
     $('.score-circle').append(`${totalScore} `);
-    console.log('Momen Hesham ' + totalScore);
-    console.log(totalScore);
+    // console.log('Momen Hesham ' + totalScore);
+    // console.log(totalScore);
 };
 
 function submit() {
