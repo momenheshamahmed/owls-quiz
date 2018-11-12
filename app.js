@@ -231,8 +231,6 @@ $(function () {
     $('.submit-button').hide();
 
 
-    $('.playstore').hide();
-    $('.appstore').hide();
 
     startChoppin();
 
@@ -246,20 +244,3 @@ $(function () {
     tryAgain();
 })
 
-
-function store() {
-    if(navigator.userAgent.toLowerCase().indexOf("android") > -1){
-        console.log("momen")
-        $('.playstore').show();
-    
-    }
-    else if(navigator.userAgent.toLowerCase().indexOf("iphone") > -1){
-        $('.appstore').show();
-    }
-    else {
-        $('.playstore').show();
-        $('.appstore').show();
-        
-    }
-
-}

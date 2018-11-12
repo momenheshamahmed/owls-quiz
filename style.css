@@ -35,7 +35,7 @@ user-select: none;
 
 /* Body */
 body {
-    background: url('Assets/background.jpg');
+    background: url('Assets/background.png');
     background-size: cover;
     background-position: center;
     margin: 4% 10%;
